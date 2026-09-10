@@ -102,5 +102,15 @@ export interface ProductoItem {
  */
 export function calcularPrecioFinal(producto: ProductoItem): number {
   // 👇 TODO: Escribe tu lógica aquí y reemplaza el return 0:
-  return 0;
+  if (!producto.disponible){
+return 0;
+  }
+  
+  if (producto.descuentoPorcentaje && producto.descuentoPorcentaje  > 0){
+    const descuento = producto.precio * (producto.descuentoPorcentaje/ 100);
+    const precioFinal = producto.precio - descuento;
+    return Number( precioFinal.toFixed(2));
+
+   }
+   return Number(producto.precio.toFixed(2));
 }
