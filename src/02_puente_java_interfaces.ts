@@ -56,8 +56,8 @@ export interface PerfilUsuario {
 // TODO: Completa la variable constante `usuarioEjemplo` asignando valores válidos:
 export const usuarioEjemplo: PerfilUsuario = {
   id: "UETS-2026-001",
-  nombreCompleto: "",                                // 👈 TODO: Llena tu nombre completo
-  correo: "estudiante@est.salesianos.edu.ec",        // 👈 TODO: Tu correo institucional
+  nombreCompleto: "David Ismael Tenezaca Guartatanga",                                // 👈 TODO: Llena tu nombre completo
+  correo: "david.tenezacag.est@.salesianos.edu.ec",        // 👈 TODO: Tu correo institucional
   rol: "ESTUDIANTE"
 };
 
@@ -69,7 +69,7 @@ export const usuarioEjemplo: PerfilUsuario = {
  */
 export function formatearPerfilUsuario(usuario: PerfilUsuario): string {
   // 👇 TODO: Escribe tu lógica con Template Strings y reemplaza el return "":
-  return "";
+  return `[PERFIL] ${usuario.id} (${usuario.rol}): ${usuario.rol}- ${usuario.correo}` ;
 }
 
 // ============================================================================
