@@ -64,7 +64,7 @@ export function calcularPromedio(notas: readonly number[]): number {
 }
 
 // ============================================================================
-// PASO 3: Formateador de Ficha Técnica
+// PASO 3: Formateador de Ficha Técnica 
 // ============================================================================
 /**
  * TODO: Implementa la función `formatearFichaEstudiante`.
