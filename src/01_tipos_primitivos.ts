@@ -84,5 +84,5 @@ export function formatearFichaEstudiante(
   activo: boolean
 ): string {
   // 👇 TODO: Escribe tu lógica aquí y reemplaza el return "":
-  return `[FICHA UETS] ${nombre.toUpperCase()} (${edad} años) - Paralelo: ${paralelo} - Estado: ${activo ? "MATRICULADO" : "RETIRADO"}`;
+  return `[FICHA UETS] ${nombre.toUpperCase()} (${edad} años) - Paralelo: ${paralelo} - Estado: ${activo ? 'MATRICULADO' : 'RETIRADO'}`;  
 }
