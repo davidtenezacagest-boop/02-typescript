@@ -26,10 +26,10 @@
 // - `promedioObjetivo` (number): Debe ser un número decimal (ej. 9.85).
 // - `estaMatriculado` (boolean): Debe ser true.
 
-export const nombreEstudiante: string = "";       // 👈 TODO: Escribe tu nombre aquí
-export const edadEstudiante: number = 0;          // 👈 TODO: Escribe tu edad aquí
-export const promedioObjetivo: number = 0;        // 👈 TODO: Escribe tu promedio objetivo
-export let estaMatriculado: boolean = false;    // 👈 TODO: Cambia a true
+export const nombreEstudiante: string = "David";       // 👈 TODO: Escribe tu nombre aquí
+export const edadEstudiante: number = 17;          // 👈 TODO: Escribe tu edad aquí
+export const promedioObjetivo: number = 9.5;        // 👈 TODO: Escribe tu promedio objetivo
+export let estaMatriculado: boolean = true;    // 👈 TODO: Cambia a true
 
 /**
  * TODO: Implementa la función `obtenerResumenPersonal` usando Template Strings (${...}).
@@ -38,7 +38,7 @@ export let estaMatriculado: boolean = false;    // 👈 TODO: Cambia a true
  */
 export function obtenerResumenPersonal(): string {
   // 👇 TODO: Escribe tu lógica aquí y reemplaza el return "":
-  return "";
+  return `👤 Estudiante: ${nombreEstudiante} | 🎂 Edad: ${edadEstudiante} | 🎯 Meta: ${promedioObjetivo} | 📋 Estado: ${estaMatriculado ? 'MATRICULADO' : 'NO_MATRICULADO' }`;
 }
 
 // ============================================================================
@@ -55,7 +55,12 @@ export function obtenerResumenPersonal(): string {
  */
 export function calcularPromedio(notas: readonly number[]): number {
   // 👇 TODO: Escribe tu lógica aquí y reemplaza el return 0:
-  return 0;
+  if (notas.length < 1) {
+    return 0;
+  }
+  const suma = notas.reduce((acumulador, nota) => acumulador + nota, 0);
+  const promedio = suma / notas.length;
+  return Number(promedio.toFixed(2));
 }
 
 // ============================================================================
@@ -79,5 +84,5 @@ export function formatearFichaEstudiante(
   activo: boolean
 ): string {
   // 👇 TODO: Escribe tu lógica aquí y reemplaza el return "":
-  return "";
+  return `[FICHA UETS] ${nombre.toUpperCase()} (${edad} años) - Paralelo: ${paralelo} - Estado: ${activo ? "MATRICULADO" : "RETIRADO"}`;
 }

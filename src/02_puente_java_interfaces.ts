@@ -49,7 +49,7 @@ export interface PerfilUsuario {
   readonly id: string;
   nombreCompleto: string;
   correo: string;
-  telefono?: string;
+  telefono? : string;
   rol: "ADMIN" | "DOCENTE" | "ESTUDIANTE";
 }
 
